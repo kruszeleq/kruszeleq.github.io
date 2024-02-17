@@ -21,9 +21,11 @@ const Navbar = () => {
               <FaHome className="w-4 h-4" />
             </a>
           </Button>
-          <Button variant="outline">
-            <PiBagFill className="mr-2 w-4 h-4" />
-            Portfolio
+          <Button variant="outline" asChild>
+            <a href="/">
+              <PiBagFill className="mr-2 w-4 h-4" />
+              Portfolio
+            </a>
           </Button>
         </div>
         <div className="mx-auto">
@@ -55,25 +57,27 @@ const Navbar = () => {
           </Button>
         </div>
         {isOpen && (
-          <div className="flex basis-full flex-col items-center mt-10 space-y-3">
-            <Button variant="outline" asChild>
+          <div className="flex basis-full flex-col items-center mt-10 space-y-3 border-t-2 py-10">
+            <Button variant="outline" asChild className="w-full">
               <a href="/">
                 <FaHome className="w-4 h-4 mr-2" />
                 Strona główna
               </a>
             </Button>
-            <Button variant="outline">
-              <PiBagFill className="mr-2 w-4 h-4" />
-              Portfolio
+            <Button variant="outline" asChild className="w-full">
+              <a href="/">
+                <PiBagFill className="mr-2 w-4 h-4" />
+                Portfolio
+              </a>
             </Button>
-            <Button variant="outline" asChild>
+            <Button variant="outline" asChild className="w-full">
               <a href="https://github.com/kruszeleq">
                 <FaGithub className="h-4 w-4 mr-2" />
                 Github
               </a>
             </Button>
-            <Button variant="outline" asChild>
-              <a href="#">
+            <Button variant="outline" asChild className="w-full">
+              <a href="/">
                 <FaDiscord className="h-4 w-4 mr-2" />
                 Discord
               </a>
