@@ -6,7 +6,7 @@ export default function Home() {
     <div className="py-10 flex justify-center ">
       <Alert className="w-[20rem]">
         <Clock1 className="h-4 w-4" />
-        <AlertTitle>Prace trwają...</AlertTitle>
+        <AlertTitle>Strona główna</AlertTitle>
         <AlertDescription>Strona nie jest jeszcze ukończona</AlertDescription>
       </Alert>
     </div>

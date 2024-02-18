@@ -5,7 +5,7 @@ import { MdClose } from "react-icons/md";
 import { PiBagFill } from "react-icons/pi";
 import { ModeToggle } from "./ThemeToggle";
 import { useState } from "react";
-
+import Link from "next/link";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,15 +17,15 @@ const Navbar = () => {
       <div className="container mx-auto flex flex-wrap flex-row justify-center items-center border-b-2 py-5 text-secondary-foreground">
         <div className="space-x-2 mr-auto hidden md:flex">
           <Button size="icon" variant="outline" asChild>
-            <a href="/">
+            <Link href="/">
               <FaHome className="w-4 h-4" />
-            </a>
+            </Link>
           </Button>
           <Button variant="outline" asChild>
-            <a href="/">
+            <Link href="/portfolio">
               <PiBagFill className="mr-2 w-4 h-4" />
               Portfolio
-            </a>
+            </Link>
           </Button>
         </div>
         <div className="mx-auto">
@@ -59,16 +59,16 @@ const Navbar = () => {
         {isOpen && (
           <div className="flex basis-full flex-col items-center mt-10 space-y-3 border-t-2 py-10">
             <Button variant="outline" asChild className="w-full">
-              <a href="/">
+              <Link href="/">
                 <FaHome className="w-4 h-4 mr-2" />
                 Strona główna
-              </a>
+              </Link>
             </Button>
             <Button variant="outline" asChild className="w-full">
-              <a href="/">
+              <Link href="/portfolio">
                 <PiBagFill className="mr-2 w-4 h-4" />
                 Portfolio
-              </a>
+              </Link>
             </Button>
             <Button variant="outline" asChild className="w-full">
               <a href="https://github.com/kruszeleq">
