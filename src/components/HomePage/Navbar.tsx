@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { FaGithub, FaDiscord, FaHome, FaList } from "react-icons/fa";
+import { FaGithub, FaDiscord, FaHome, FaList, FaPhone } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import { PiBagFill } from "react-icons/pi";
 import { ModeToggle } from "./ThemeToggle";
@@ -14,7 +14,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="container mx-auto flex flex-wrap flex-row justify-center items-center border-b-2 py-5 text-secondary-foreground">
+      <div className="bg-stone-50 dark:bg-stone-950 px-10 mx-auto flex flex-wrap flex-row justify-center items-center border-b-2 py-5 text-secondary-foreground">
         <div className="space-x-2 mr-auto hidden md:flex">
           <Button size="icon" variant="outline" asChild>
             <Link href="/">
@@ -27,9 +27,15 @@ const Navbar = () => {
               Portfolio
             </Link>
           </Button>
+          <Button variant="outline" asChild>
+            <Link href="#">
+              <FaPhone className="mr-2 w-4 h-4 rotate-90" />
+              Kontakt
+            </Link>
+          </Button>
         </div>
         <div className="mx-auto">
-          <h1 className="bg-gradient-to-r from-zinc-300  to-zinc-700 bg-clip-text text-transparent font-extrabold text-3xl md:mr-[2rem] -mr-[5rem]">
+          <h1 className="bg-gradient-to-r from-zinc-300  to-zinc-700 bg-clip-text text-transparent font-extrabold text-3xl md:mr-[9rem] -mr-[5.5rem]">
             itzkrofi
           </h1>
         </div>
@@ -68,6 +74,12 @@ const Navbar = () => {
               <Link href="/portfolio">
                 <PiBagFill className="mr-2 w-4 h-4" />
                 Portfolio
+              </Link>
+            </Button>
+            <Button variant="outline" asChild className="w-full">
+              <Link href="#">
+                <FaPhone className="mr-2 w-4 h-4 rotate-90" />
+                Kontakt
               </Link>
             </Button>
             <Button variant="outline" asChild className="w-full">
