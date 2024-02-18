@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/HomePage/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/HomePage/Footer";
+import Background from "@/components/HomePage/Background";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,13 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="pl">
-      <body className={inter.className}>
+      <body className={`${inter.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <Background />
           <Navbar />
           {children}
           <Footer />
