@@ -1,12 +1,18 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { ModeToggle } from "./ThemeToggle";
+import { toast } from "sonner";
+
 import { FaGithub, FaDiscord, FaHome, FaList, FaPhone } from "react-icons/fa";
+
 import { MdClose, MdLanguage } from "react-icons/md";
 import { PiBagFill } from "react-icons/pi";
-import { ModeToggle } from "./ThemeToggle";
+
 import { useState } from "react";
+
 import Link from "next/link";
-import { toast } from "sonner";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -36,7 +42,7 @@ const Navbar = () => {
           </Button>
         </div>
         <div className="mx-auto">
-          <h1 className="bg-gradient-to-r from-zinc-300  to-zinc-700 bg-clip-text text-transparent font-extrabold text-3xl md:mr-[6.5rem] -mr-[5.5rem]">
+          <h1 className="bg-gradient-to-r from-zinc-300  to-zinc-700 bg-clip-text text-transparent font-extrabold text-3xl md:mr-[5.5rem] -mr-[5.5rem]">
             itzkrofi
           </h1>
         </div>
@@ -51,6 +57,7 @@ const Navbar = () => {
               <FaDiscord className="h-4 w-4" />
             </a>
           </Button>
+          <Separator orientation="vertical" className="h-10" />
           <Button
             size="icon"
             variant="outline"
