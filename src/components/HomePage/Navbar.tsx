@@ -40,7 +40,7 @@ const Navbar = () => {
             </a>
           </Button>
           <Button size="icon" variant="outline" asChild>
-            <a href="#">
+            <a href="https://discord.com/users/813435252776501308">
               <FaDiscord className="h-4 w-4" />
             </a>
           </Button>
@@ -77,7 +77,7 @@ const Navbar = () => {
               </a>
             </Button>
             <Button variant="outline" asChild className="w-full">
-              <a href="/">
+              <a href="https://discord.com/users/813435252776501308">
                 <FaDiscord className="h-4 w-4 mr-2" />
                 Discord
               </a>
