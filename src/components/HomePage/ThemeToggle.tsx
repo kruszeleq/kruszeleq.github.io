@@ -1,3 +1,6 @@
+"use client";
+
+import * as React from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
@@ -8,15 +11,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import initTranslations from "@/i18n";
 
-interface Props {
-  namespaces: string[];
-  locale: string;
-}
-
-export function ModeToggle(props: Props) {
-  // const { t } = initTranslations(props.locale, ["themetoggle"]);
+export function ModeToggle() {
   const { setTheme } = useTheme();
 
   return (
@@ -30,16 +26,13 @@ export function ModeToggle(props: Props) {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          {/* {t("themetoggle:light")} */}
-          light
+          Jasny
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          {/* {t("themetoggle:dark")} */}
-          dark
+          Ciemny
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          {/* {t("themetoggle:system")} */}
-          system
+          Systemowy
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

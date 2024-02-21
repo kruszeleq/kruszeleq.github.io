@@ -1,17 +1,15 @@
 import Cards from "@/components/Items/Card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import initTranslations from "@/i18n";
 import { Clock1 } from "lucide-react";
 
-const PortfolioPage = async ({ params }: { params: { locale: string } }) => {
-  const { t } = await initTranslations(params.locale, ["portfolio"]);
+const PortfolioPage = () => {
   return (
     <>
       <div className="py-10 flex justify-center">
         <Alert className="w-[20rem] dark:bg-stone-950 bg-stone-50">
           <Clock1 className="h-4 w-4" />
-          <AlertTitle>{t("portfolio:title")}</AlertTitle>
-          <AlertDescription>{t("portfolio:description")}</AlertDescription>
+          <AlertTitle>Portfolio</AlertTitle>
+          <AlertDescription>Strona nie jest jeszcze ukończona</AlertDescription>
         </Alert>
       </div>
       <div className="py-5 flex flex-col items-center space-y-10">
