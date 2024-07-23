@@ -9,8 +9,7 @@ const nextConfig = {
       },
     ],
   },
-  output: "export",
-  basePath: "/",
+  output: "export"
 };
 
 export default nextConfig;
