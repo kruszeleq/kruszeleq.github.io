@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "./../components/main/navbar";
 import { cn } from "@/lib/utils";
 import Config from "./app.config";
-import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,21 +24,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(poppins.className)}>
+        <div className="fixed inset-0 -z-20 h-full w-full [background:radial-gradient(125%_125%_at_50%_10%,#121212_40%,#242424_100%)]"></div>
         <Navbar />
-        <Toaster
-          toastOptions={{
-            style: {
-              border: "1px solid #383838",
-              background: "#1e1e1f",
-              borderRadius: "1.5rem",
-              color: "white",
-            },
-            success: {
-              icon: "🕒",
-            },
-          }}
-          position="bottom-center"
-        />
         {children}
       </body>
     </html>
