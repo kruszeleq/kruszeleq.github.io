@@ -19,28 +19,23 @@ const Card: FC<ICard> = (props) => {
     >
       <Image
         src={props.imageURL}
-        width={350}
-        height={250}
+        width={400}
+        height={200}
         alt="Project Photo"
-        className="max-w-[350px] mb-5 max-h-[250px] align-center rounded-xl fadein-bot duration-1000"
+        className="w-[400px] mb-5 h-[200px] self-stretch rounded-xl fadein-bot duration-1000"
       />
       <h2 className="text-3xl font-semibold text-[#ff7070] fadein-left fadeins-1">
         {props.title}
       </h2>
       <p className="mb-7 mt-2 fadein-left fadeins-2">{props.description}</p>
-      {/* <Link href={props.butt} className="w-full fadein-up delay-1000"> */}
-      <button
-        onClick={() => {
-          toast.success("Wkrótce...", {
-            id: "soon",
-          });
-        }}
-        className="text-red-400 hover:text-white bg-red-400 bg-opacity-10 p-2 rounded-xl w-full text-2xl font-semibold transition-colors fadein-up"
-        style={{ animationDelay: "1000ms" }}
-      >
-        Zobacz więcej
-      </button>
-      {/* </Link> */}
+      <Link href={props.buttonLink} className="w-full fadein-up delay-1000">
+        <button
+          className="text-red-400 hover:text-white bg-red-400 bg-opacity-10 p-2 rounded-xl w-full text-2xl font-semibold transition-colors fadein-up"
+          style={{ animationDelay: "000ms" }}
+        >
+          Zobacz więcej
+        </button>
+      </Link>
     </div>
   );
 };

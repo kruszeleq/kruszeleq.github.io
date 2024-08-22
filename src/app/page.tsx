@@ -3,7 +3,7 @@ import Config from "./app.config";
 
 export default function Home() {
   return (
-    <main className="overflow-hidden mt-[100px] flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[80vh]">
+    <main className="mt-[100px] flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[80vh]">
       <div className="space-y-2 text-center md:text-left px-10 fadein-bot duration-1000">
         <p className="text-red-200">Cześć! Jestem</p>
         <h1 className="text-4xl font-bold md:text-5xl text-white">itzkrofi</h1>

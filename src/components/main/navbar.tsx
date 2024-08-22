@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaDiscord, FaGithub } from "react-icons/fa";
+import Buttons from "./buttons";
 
 export default function Navbar() {
   const currentPath = usePathname();
@@ -19,36 +20,9 @@ export default function Navbar() {
       </div>
       <div className="mx-auto inline-block text-sm">
         <nav className="hidden items-center gap-6 md:flex space-x-3">
-          <Link
-            href="/"
-            className={cn(
-              currentPath === "/" ? "router-active" : "router-noactive",
-              "fadein-bot"
-            )}
-            prefetch={false}
-          >
-            Główna
-          </Link>
-          <Link
-            href="/about"
-            className={cn(
-              currentPath === "/about" ? "router-active" : "router-noactive",
-              "fadein-bot"
-            )}
-            prefetch={false}
-          >
-            O mnie
-          </Link>
-          <Link
-            href="/projects"
-            className={cn(
-              currentPath === "/projects" ? "router-active" : "router-noactive",
-              "fadein-bot"
-            )}
-            prefetch={false}
-          >
-            Projekty
-          </Link>
+          <Buttons href="/" text="Główna" />
+          <Buttons href="/about" text="O mnie" />
+          <Buttons href="/projects" text="Projekty" />
         </nav>
       </div>
       <div className="mx-auto">
