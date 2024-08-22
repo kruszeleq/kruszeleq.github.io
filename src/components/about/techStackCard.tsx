@@ -15,11 +15,11 @@ export function TechStackCard({
   return (
     <div
       className={cn(
-        "border border-red-400 text-left p-3 w-full md:flex-[1_0_30%] rounded-xl items-center text-white text-lg flex bg-red-400 bg-opacity-10 fadein-up",
+        "border border-red-400 text-left p-3 w-full md:flex-[1_0_30%] rounded-xl items-center text-white text-lg flex bg-red-400 bg-opacity-10 fadein-up truncate",
         className
       )}
     >
-      <Icon className="mr-3" size={56} />
+      <Icon className="mr-3 flex-shrink-0" size={56} />
       <div className="text-left2 text-nowrap">
         <h2 className="font-semibold">{name}</h2>
         <h3 className="text-sm text-red-400">{advanced}</h3>

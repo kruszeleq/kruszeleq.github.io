@@ -63,12 +63,12 @@ function NextronPage() {
           <TechStackCard
             name="Discord.js"
             Icon={BiLogoDiscordAlt}
-            advanced="Biblioteka do obsługi Discord API"
+            advanced="Biblioteka Discord API"
           />
           <TechStackCard
             name="Distube"
             Icon={BiMusic}
-            advanced="Obsługa kolejek, wyszukiwanie muzyki"
+            advanced="Moduł do obsługi muzyki"
           />
         </div>
       </div>
@@ -76,7 +76,7 @@ function NextronPage() {
         <header>
           <div className="text-2xl font-bold text-white mb-5 justify-center fadein-bot title-div flex items-center delay-300">
             <div className="h-[1px] w-16 bg-red-400 md:w-48"></div>&nbsp;
-            Przykładowe komendy &nbsp;
+            Komendy &nbsp;
             <div className="h-[1px] w-16 bg-red-400 md:w-48"></div>
           </div>
         </header>
@@ -104,17 +104,17 @@ function NextronPage() {
           <TechStackCard
             name="stop"
             Icon={RxSlash}
-            advanced="Zatrzymuje kolejkę, usuwa z niej utwory"
+            advanced="Zatrzymuje kolejkę"
           />
           <TechStackCard
             name="autoplay"
             Icon={RxSlash}
-            advanced="Automatycznie odtwarza kolejne powiązane utwory"
+            advanced="Odtwarza powiązane utwory"
           />
           <TechStackCard
             name="filter"
             Icon={RxSlash}
-            advanced="Dodanie efektów do muzyki, np nightcore"
+            advanced="Efekty, np nightcore"
           />
         </div>
       </div>
