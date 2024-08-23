@@ -53,7 +53,7 @@ const page = () => {
       <div className="my-20 space-y-20">
         <div className="m-10 h-full flex justify-center flex-col">
           <header>
-            <div className="text-2xl font-bold text-white mb-5 justify-center fadein-bot title-section flex items-center delay-300">
+            <div className="text-2xl font-bold text-white mb-10 justify-center fadein-bot title-section flex items-center delay-300">
               <div className="h-[1px] w-16 bg-red-400 md:w-48"></div>&nbsp; Tech
               Stack &nbsp;
               <div className="h-[1px] w-16 bg-red-400 md:w-48"></div>
@@ -95,7 +95,7 @@ const page = () => {
 
         <div className="m-10 h-full flex justify-center mt-10 flex-col">
           <header>
-            <div className="text-2xl font-bold text-white mb-5 justify-center fadein-bot title-div flex items-center delay-300">
+            <div className="text-2xl font-bold text-white mb-10 justify-center fadein-bot title-div flex items-center delay-300">
               <div className="h-[1px] w-16 bg-red-400 md:w-48"></div>&nbsp;
               Narzędzia &nbsp;
               <div className="h-[1px] w-16 bg-red-400 md:w-48"></div>

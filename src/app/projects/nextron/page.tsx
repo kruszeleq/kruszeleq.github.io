@@ -43,7 +43,7 @@ function NextronPage() {
       </div>
       <div className="m-10 h-full flex justify-center mt-36 flex-col">
         <header>
-          <div className="text-2xl font-bold text-white mb-5 justify-center fadein-bot title-div flex items-center delay-300">
+          <div className="text-2xl font-bold text-white mb-10 justify-center fadein-bot title-div flex items-center delay-300">
             <div className="h-[1px] w-16 bg-red-400 md:w-48"></div>&nbsp;
             Technologie &nbsp;
             <div className="h-[1px] w-16 bg-red-400 md:w-48"></div>
@@ -74,7 +74,7 @@ function NextronPage() {
       </div>
       <div className="m-10 h-full flex justify-center mt-36 mb-20 flex-col">
         <header>
-          <div className="text-2xl font-bold text-white mb-5 justify-center fadein-bot title-div flex items-center delay-300">
+          <div className="text-2xl font-bold text-white mb-10 justify-center fadein-bot title-div flex items-center delay-300">
             <div className="h-[1px] w-16 bg-red-400 md:w-48"></div>&nbsp;
             Komendy &nbsp;
             <div className="h-[1px] w-16 bg-red-400 md:w-48"></div>

@@ -14,7 +14,7 @@ interface ICard {
 const Card: FC<ICard> = (props) => {
   return (
     <div
-      className="flex-[50%] max-w-[450px] px-5 py-5 md:px-12 md:py-10 inline-flex flex-col justify-center items-center text-center border border-[#383838] bg-[#1e1e1f]
+      className="flex-[50%] max-w-[450px] px-12 py-10 inline-flex flex-col justify-center items-center text-center border border-[#383838] bg-[#1e1e1f]
       rounded-3xl text-white mx-3 mb-5 overflow-hidden"
     >
       <Image
