@@ -5,8 +5,11 @@ import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import Buttons from "./buttons";
+import { BiBriefcase, BiHome, BiUser } from "react-icons/bi";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+	const pathname = usePathname();
 	const [nav, setNav] = useState(false);
 
 	const handleNav = () => {
@@ -17,14 +20,17 @@ export default function Navbar() {
 		{
 			href: "/",
 			text: "Główna",
+			icon: <BiHome className="h-6 w-6" />
 		},
 		{
 			href: "/about",
 			text: "O mnie",
+			icon: <BiUser className="h-6 w-6" />
 		},
 		{
 			href: "/projects",
 			text: "Projekty",
+			icon: <BiBriefcase className="h-6 w-6" />
 		},
 	];
 
@@ -72,7 +78,7 @@ export default function Navbar() {
 					})}
 					<div
 						onClick={handleNav}
-						className="block md:hidden text-muted-foreground"
+						className="block md:hidden text-muted-foreground fadein-bot duration-300"
 					>
 						{nav ? (
 							<AiOutlineClose className="w-5 h-5" />
@@ -85,20 +91,20 @@ export default function Navbar() {
 			<div
 				className={cn(
 					nav
-						? "fixed md:hidden bottom-0 left-0 h-[10%] w-full border-t border-t-red-400 bg-red-400/10 backdrop-blur-xl ease-in-out duration-500"
+						? "fixed md:hidden bottom-0 left-0 h-[10%] w-full border-t border-t-[#383838] bg-[#1e1e1f] ease-in-out duration-500"
 						: "ease-in-out h-[10%] duration-1000 fixed left-0 right-0 bottom-[-100%]",
 					"z-10",
 				)}
 			>
-				<div className="flex justify-center h-full items-center text-center space-x-6 text-white">
+				<div className="flex justify-center h-full items-center text-center space-x-6 text-muted-foreground">
 					{navItems.map((item, i) => {
 						return (
 							<Link
 								key={i}
 								href={item.href}
-								className="text-nowrap border border-red-400 py-2 w-1/5 text-center bg-red-400 bg-opacity-10 rounded-3xl"
+								className={cn("text-nowrap w-1/5 text-center flex flex-col items-center text-sm transition-colors duration-300", pathname == item.href || (item.href !== '/' && pathname.startsWith(item.href)) ? "text-white" : "")}
 							>
-								{item.text}
+								{item.icon} {item.text}
 							</Link>
 						);
 					})}
