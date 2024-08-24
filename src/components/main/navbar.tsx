@@ -1,12 +1,12 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { BiBriefcase, BiHome, BiUser } from "react-icons/bi";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import Buttons from "./buttons";
-import { BiBriefcase, BiHome, BiUser } from "react-icons/bi";
-import { usePathname } from "next/navigation";
 
 export default function Navbar() {
 	const pathname = usePathname();
@@ -20,17 +20,17 @@ export default function Navbar() {
 		{
 			href: "/",
 			text: "Główna",
-			icon: <BiHome className="h-6 w-6" />
+			icon: <BiHome className="h-6 w-6" />,
 		},
 		{
 			href: "/about",
 			text: "O mnie",
-			icon: <BiUser className="h-6 w-6" />
+			icon: <BiUser className="h-6 w-6" />,
 		},
 		{
 			href: "/projects",
 			text: "Projekty",
-			icon: <BiBriefcase className="h-6 w-6" />
+			icon: <BiBriefcase className="h-6 w-6" />,
 		},
 	];
 
@@ -102,7 +102,13 @@ export default function Navbar() {
 							<Link
 								key={i}
 								href={item.href}
-								className={cn("text-nowrap w-1/5 text-center flex flex-col items-center text-sm transition-colors duration-300", pathname == item.href || (item.href !== '/' && pathname.startsWith(item.href)) ? "text-white" : "")}
+								className={cn(
+									"text-nowrap w-1/5 text-center flex flex-col items-center text-sm transition-colors duration-300",
+									pathname === item.href ||
+										(item.href !== "/" && pathname.startsWith(item.href))
+										? "text-white"
+										: "",
+								)}
 							>
 								{item.icon} {item.text}
 							</Link>

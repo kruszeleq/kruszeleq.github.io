@@ -14,7 +14,9 @@ export default function Buttons({
 		<Link
 			href={href}
 			className={cn(
-				currentPath == href || (href !== '/' && currentPath.startsWith(href)) ? "router-active" : "router-noactive",
+				currentPath === href || (href !== "/" && currentPath.startsWith(href))
+					? "router-active"
+					: "router-noactive",
 				"fadein-bot",
 			)}
 		>
