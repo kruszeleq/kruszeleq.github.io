@@ -3,22 +3,22 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Buttons({
-  href,
-  text,
+	href,
+	text,
 }: {
-  href: string;
-  text: string;
+	href: string;
+	text: string;
 }) {
-  const currentPath = usePathname();
-  return (
-    <Link
-      href={href}
-      className={cn(
-        currentPath === href ? "router-active" : "router-noactive",
-        "fadein-bot"
-      )}
-    >
-      {text}
-    </Link>
-  );
+	const currentPath = usePathname();
+	return (
+		<Link
+			href={href}
+			className={cn(
+				currentPath === href ? "router-active" : "router-noactive",
+				"fadein-bot",
+			)}
+		>
+			{text}
+		</Link>
+	);
 }
