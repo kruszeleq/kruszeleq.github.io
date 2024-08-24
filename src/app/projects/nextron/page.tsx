@@ -13,7 +13,7 @@ import { RxSlash } from "react-icons/rx";
 
 function NextronPage() {
 	return (
-		<div className="mt-[50px] max-w-7xl w-full m-auto">
+		<div className="mt-[50px] mb-36 max-w-7xl w-full m-auto">
 			<div className="px-5 py-5 md:px-12 md:py-10 text-left border border-[#383838] bg-[#1e1e1f] rounded-3xl text-white mx-3 mb-5 overflow-hidden">
 				<div className="flex text-center items-center ">
 					<Image
